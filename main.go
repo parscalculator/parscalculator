@@ -35,18 +35,18 @@ res, _ := http.DefaultClient.Do(req)
 
 defer res.Body.Close()
 body, _ := ioutil.ReadAll(res.Body)
-fmt.Println(string(body))
-fmt.Println(string(payload))
+
 strbody:= string(body)
 type nova struct {
     Id    string
     Link  string
 }
 var ret nova
-json.Unmarshal([]byte(string(body)), &ret)
+json.Unmarshal([]byte(strbody), &ret)
+fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
 return &events.APIGatewayProxyResponse{
         StatusCode:        302,
-        Headers:           map[string]string{"Location": "https://google.com" , "Content-Type": "text/plain"},
+        Headers:           map[string]string{"Location": ret.link , "Content-Type": "text/plain"},
         MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
         Body:              "Hello, World!",
         IsBase64Encoded:   false,

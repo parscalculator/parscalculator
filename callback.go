@@ -16,8 +16,8 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
   url := "https://api.idpay.ir/v1.1/payment/verify"
 
 data := map[string]string{
-  "id":       "d2e353189823079e1e4181772cff5292",
-  "order_id": "101",
+  "id":       params["id"],
+  "order_id": params["order_id"],
 }
 
 payload, _ := json.Marshal(data)

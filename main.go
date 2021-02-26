@@ -21,7 +21,7 @@ data := map[string]string{
   "order_id": "101",
   "amount":   "10000",
   "name":     params["name"],
-  "phone":    "09382198592",
+  "phone":    params["number"],
   "mail":     "my@site.com",
   "desc":     "توضیحات پرداخت کننده",
   "callback": "https://example.com/callback",

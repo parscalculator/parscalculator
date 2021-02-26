@@ -1,19 +1,16 @@
 package main
 
-import (
-    "fmt"
-    "io/ioutil"
-    "net/http"
-    "context"
+import {
     "github.com/aws/aws-lambda-go/events"
     "github.com/aws/aws-lambda-go/lambda"
+    "net/http"
 )
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     name := "World"
     
     return &events.APIGatewayProxyResponse{
-        StatusCode:        302,
+        StatusCode:        200,
         Headers:           map[string]string{Location: "https://google.com",'Cache-Control': 'no-cache',},
         Body:       "Hi " + name,
     }, nil

@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4001/sitemap.xml
+Sitemap: https://angry-albattani-4d4bde.netlify.app//sitemap.xml

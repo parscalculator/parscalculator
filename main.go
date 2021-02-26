@@ -46,7 +46,7 @@ var ret nova
 json.Unmarshal([]byte(string(body)), &ret)
 return &events.APIGatewayProxyResponse{
         StatusCode:        302,
-        Headers:           map[string]string{"Location": ret.link , "Content-Type": "text/plain"},
+        Headers:           map[string]string{"Location": string(ret.link) , "Content-Type": "text/plain"},
         MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
         Body:              "Hello, World!",
         IsBase64Encoded:   false,

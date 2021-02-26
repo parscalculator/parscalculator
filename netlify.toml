@@ -2,6 +2,7 @@
   command = "make build"
   base = "."
   functions = "./functions"
+  publish = "site"
 
 [build.environment]
   # Change this path with the path to your repository

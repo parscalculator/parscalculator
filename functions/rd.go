@@ -22,7 +22,6 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
     return &events.APIGatewayProxyResponse{
         StatusCode:        302,
         Headers:           map[string]string{Location: redirectUrl,'Cache-Control': 'no-cache',},
-        Body:              "Hello, World!",
     }, nil
 }
 

@@ -6,7 +6,7 @@ import (
     "net/http"
 )
 
-func main() {
+func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     req, err := http.NewRequest("GET", "https://www.google.com", nil)
     if err != nil {
         panic(err)

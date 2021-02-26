@@ -22,6 +22,13 @@ data := map[string]string{
   "callback": "https://example.com/callback",
 }
 
+    return &events.APIGatewayProxyResponse{
+        StatusCode:        302,
+        Headers:           map[string]string{"Location": "https://google.com" , "Content-Type": "text/plain"},
+        MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
+        Body:              "Hello, World!",
+        IsBase64Encoded:   false,
+    }, nil
 }
 
 func main() {

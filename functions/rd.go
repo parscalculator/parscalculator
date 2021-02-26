@@ -18,4 +18,15 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
         panic(err)
     }
     fmt.Println(ioutil.ReadAll(response.Body))
+
+    return &events.APIGatewayProxyResponse{
+        StatusCode:        302,
+        Headers:           map[string]string{Location: redirectUrl,'Cache-Control': 'no-cache',},
+        Body:              "Hello, World!",
+    }, nil
+}
+
+func main() {
+    // Make the handler available for Remote Procedure Call by AWS Lambda
+    lambda.Start(handler)
 }

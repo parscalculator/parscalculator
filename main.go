@@ -5,6 +5,8 @@ import (
     "github.com/aws/aws-lambda-go/lambda"
     "net/http"
     "encoding/json"
+    "bytes"
+    "io/ioutil"
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {

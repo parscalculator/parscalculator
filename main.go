@@ -19,9 +19,9 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 
 data := map[string]string{
   "order_id": "101",
-  "amount":   "10000",
+  "amount":   params["number"],
   "name":     params["name"],
-  "phone":    params["number"],
+  "phone":    "09382198592",
   "mail":     "my@site.com",
   "desc":     "توضیحات پرداخت کننده",
   "callback": "https://example.com/callback",

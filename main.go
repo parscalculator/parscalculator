@@ -8,6 +8,7 @@ import (
     "bytes"
     "io/ioutil"
     "fmt"
+    "context"
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {

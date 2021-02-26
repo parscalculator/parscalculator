@@ -1,1 +1,1 @@
-Sitemap: https://parscalculator.github.io/sitemap.xml
+Sitemap: https://angry-albattani-4d4bde.netlify.app//sitemap.xml

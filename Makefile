@@ -1,4 +1,4 @@
 build:
 	mkdir -p functions
-	go get ./...
-	go build -o functions/hello-lambda ./...
+	go get main.go
+	go get callback.go

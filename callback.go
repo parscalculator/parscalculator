@@ -12,12 +12,12 @@ import (
 )
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-    paramscb := request.QueryStringParameters
+    params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"
 
 data := map[string]string{
-  "id":       paramscb["id"],
-  "order_id": paramscb["order_id"],
+  "id":       params["id"],
+  "order_id": params["order_id"],
 }
 
 payload, _ := json.Marshal(data)
@@ -41,4 +41,9 @@ return &events.APIGatewayProxyResponse{
         Body:              "Hello, World!",
         IsBase64Encoded:   false,
     }, nil
+}
+
+func main() {
+    // Make the handler available for Remote Procedure Call by AWS Lambda
+    lambda.Start(handler)
 }

@@ -1,12 +1,12 @@
 package main
 
-import {
+import (
     "github.com/aws/aws-lambda-go/events"
     "github.com/aws/aws-lambda-go/lambda"
     "net/http"
 )
 
-func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     return &events.APIGatewayProxyResponse{
         StatusCode:        200,
         Headers:           map[string]string{"Content-Type": "text/plain"},

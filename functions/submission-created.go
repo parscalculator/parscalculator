@@ -33,6 +33,6 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 
 	defer res.Body.Close()
 	body, _ := ioutil.ReadAll(res.Body)
-
+	return "google.com"
 	fmt.Println(string(body))
 }

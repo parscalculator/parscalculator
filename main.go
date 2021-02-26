@@ -46,7 +46,7 @@ json.Unmarshal([]byte(strbody), &ret)
 fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
 return &events.APIGatewayProxyResponse{
         StatusCode:        302,
-        Headers:           map[string]string{"Location": ret.link , "Content-Type": "text/plain"},
+        Headers:           map[string]string{"Location": ret.Link , "Content-Type": "text/plain"},
         MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
         Body:              "Hello, World!",
         IsBase64Encoded:   false,

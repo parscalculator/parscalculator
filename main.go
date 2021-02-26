@@ -1,8 +1,6 @@
 package main
-
 import (
-    "github.com/aws/aws-lambda-go/events"
-    "github.com/aws/aws-lambda-go/lambda"
+
     "net/http"
     "encoding/json"
     "bytes"
@@ -10,8 +8,8 @@ import (
     "fmt"
 )
 
-func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-    url := "https://api.idpay.ir/v1.1/payment"
+func main() {
+  url := "https://api.idpay.ir/v1.1/payment"
 
 data := map[string]string{
   "order_id": "101",
@@ -36,16 +34,19 @@ res, _ := http.DefaultClient.Do(req)
 defer res.Body.Close()
 body, _ := ioutil.ReadAll(res.Body)
 fmt.Println(string(body))
-    return &events.APIGatewayProxyResponse{
+fmt.Println(string(payload))
+strbody:= string(body)
+type nova struct {
+    Id    string
+    Link  string
+}
+var ret nova
+json.Unmarshal([]byte(string(body)), &ret)
+return &events.APIGatewayProxyResponse{
         StatusCode:        302,
-        Headers:           map[string]string{"Location": "https://google.com" , "Content-Type": "text/plain"},
+        Headers:           map[string]string{"Location": ret.link , "Content-Type": "text/plain"},
         MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
         Body:              "Hello, World!",
         IsBase64Encoded:   false,
     }, nil
-}
-
-func main() {
-    // Make the handler available for Remote Procedure Call by AWS Lambda
-    lambda.Start(handler)
 }

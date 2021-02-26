@@ -1,6 +1,8 @@
 package main
-import (
 
+import (
+    "github.com/aws/aws-lambda-go/events"
+    "github.com/aws/aws-lambda-go/lambda"
     "net/http"
     "encoding/json"
     "bytes"
@@ -8,8 +10,8 @@ import (
     "fmt"
 )
 
-func main() {
-  url := "https://api.idpay.ir/v1.1/payment"
+func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+   url := "https://api.idpay.ir/v1.1/payment"
 
 data := map[string]string{
   "order_id": "101",
@@ -49,4 +51,9 @@ return &events.APIGatewayProxyResponse{
         Body:              "Hello, World!",
         IsBase64Encoded:   false,
     }, nil
+}
+
+func main() {
+    // Make the handler available for Remote Procedure Call by AWS Lambda
+    lambda.Start(handler)
 }

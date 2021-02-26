@@ -26,7 +26,7 @@ req, _ := http.NewRequest("POST", url, bytes.NewBuffer(payload))
 
 req.Header.Set("Content-Type", "application/json")
 req.Header.Set("X-API-KEY", "6a7f99eb-7c20-4412-a972-6dfb7cd253a4")
-req.Header.Set("X-SANDBOX", 1)
+req.Header.Set("X-SANDBOX", "1")
 
 res, _ := http.DefaultClient.Do(req)
 

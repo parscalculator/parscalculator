@@ -10,17 +10,6 @@ import (
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-    url := "https://api.idpay.ir/v1.1/payment"
-
-data := map[string]string{
-  "order_id": "101",
-  "amount":   "10000",
-  "name":     "قاسم رادمان",
-  "phone":    "09382198592",
-  "mail":     "my@site.com",
-  "desc":     "توضیحات پرداخت کننده",
-  "callback": "https://example.com/callback",
-}
 
     return &events.APIGatewayProxyResponse{
         StatusCode:        302,

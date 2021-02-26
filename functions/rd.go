@@ -7,9 +7,12 @@ import (
 )
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+    name := "World"
+    
     return &events.APIGatewayProxyResponse{
         StatusCode:        302,
         Headers:           map[string]string{Location: "https://google.com",'Cache-Control': 'no-cache',},
+        Body:       "Hi " + name,
     }, nil
 }
 

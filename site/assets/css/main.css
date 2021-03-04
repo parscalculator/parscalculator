@@ -1321,16 +1321,13 @@ nav,
     box-shadow: 0 8px 0 0 #424242, 0 16px 0 0 #424242; }
 
 .pagination {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
   display: flex;
   list-style: none;
   margin: 15px 0; }
   .pagination li {
     margin: 0 5px; }
     .pagination li a {
+      display: block;
       padding: 5px 10px;
       border-radius: 5px;
       background: #ffffff;

@@ -48,6 +48,8 @@ type nova struct {
 var ret nova
 json.Unmarshal([]byte(strbody), &ret)
 fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
+fmt.Printf(params)
+
 return &events.APIGatewayProxyResponse{
         StatusCode:        302,
         Headers:           map[string]string{"Location": ret.Link , "Content-Type": "text/plain"},

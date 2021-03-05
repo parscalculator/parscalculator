@@ -10,11 +10,7 @@ import (
     "fmt"
     "context"
 )
-type ClientContext struct {
-    Client ClientApplication
-    Env    map[string]string `json:"env"`
-    Custom map[string]string `json:"custom"`
-}
+
 func handler(ctx *http.Request, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"

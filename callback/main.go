@@ -38,6 +38,7 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
     var ret Body
     json.Unmarshal([]byte(request.Body), &ret)
     fmt.Printf("id: %s, link: %s", ret.Payload.Form.Id, ret.Payload.Form.Order_id)
+    fmt.Printf("id: %s, link: ", request)
 
 data := map[string]string{
   "id":       params["id"],

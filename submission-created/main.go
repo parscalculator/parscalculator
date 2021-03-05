@@ -14,8 +14,7 @@ import (
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
    url := "https://api.idpay.ir/v1.1/payment"
-   lc, ok := lambdacontext.FromContext(ctx)
-   cc := lc.ClientContext
+
 
 
 data := map[string]string{

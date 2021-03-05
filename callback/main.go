@@ -12,32 +12,12 @@ import (
 )
 
 
-type Form struct {
-    Status    string `json:"status"`
-    Track_id    string `json:"track_id"`
-    Id string `json:"id"`
-    Order_id string `json:"order_id"`
-    Amount  string `json:"amount"`
-    Card_no    string `json:"card_no"`
-    Hashed_card_no    string `json:"hashed_card_no"`
-    Date   string `json:"date"`
-}
-
-type Payload struct {
-    Form Form `json:"data"`
-}
-
-type Body struct {
-    Payload Payload `json:"payload"`
-}
 
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"
-    var ret Body
-    json.Unmarshal([]byte(request.Body), &ret)
-    fmt.Printf("id: %s, link: %s", ret.Payload.Form.Id, ret.Payload.Form.Order_id)
+    fmt.Printf("id: %s, link: %s", params["id"], params["order_id"])
     fmt.Printf("id: %s, link: ", request)
 
 data := map[string]string{

@@ -15,6 +15,11 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
     params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"
 
+mux.HandleFunc("/signup", func(w http.ResponseWriter, r *http.Request) {
+        //NOTE : Invoke ParseForm or ParseMultipartForm before reading form values
+        r.ParseForm()
+        fmt.Printf("USERNAME => %s\n", r.FormValue("id"))
+
 data := map[string]string{
   "id":       params["id"],
   "order_id": params["order_id"],

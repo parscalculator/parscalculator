@@ -47,6 +47,7 @@ defer res.Body.Close()
 defer res2.Body.Close()
 
 body, _ := ioutil.ReadAll(res.Body)
+body2, _ := ioutil.ReadAll(res2.Body)
 
 
 strbody:= string(body)
@@ -54,9 +55,19 @@ type nova struct {
     Id    string
     Link  string
 }
+strbody2:= string(body)
+type nova2 struct {
+    Name    string
+}
+
 var ret nova
+var ret2 nova2
+
 json.Unmarshal([]byte(strbody), &ret)
+json.Unmarshal([]byte(strbody2), &ret2)
+
 fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
+fmt.Printf("name: %s", ret.Name)
 return &events.APIGatewayProxyResponse{
         StatusCode:        302,
         Headers:           map[string]string{"Location": ret.Link , "Content-Type": "text/plain"},

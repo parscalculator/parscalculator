@@ -14,14 +14,14 @@ import (
 
 
 type Form struct {
-    Status    number `json:"status"`
+    Status    string `json:"status"`
     Track_id    number `json:"track_id"`
     Id string `json:"id"`
     Order_id string `json:"order_id"`
-    Amount  number `json:"amount"`
+    Amount  string `json:"amount"`
     Card_no    string `json:"card_no"`
     Hashed_card_no    string `json:"hashed_card_no"`
-    Date   timestamp `json:"date"`
+    Date   string `json:"date"`
 }
 
 type Payload struct {

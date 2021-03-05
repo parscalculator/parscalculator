@@ -47,7 +47,6 @@ defer res.Body.Close()
 defer res2.Body.Close()
 
 body, _ := ioutil.ReadAll(res.Body)
-body2, _ := ioutil.ReadAll(res2.Body)
 
 
 strbody:= string(body)

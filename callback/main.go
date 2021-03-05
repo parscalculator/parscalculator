@@ -30,7 +30,7 @@ type Body struct {
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"
-    var dt Body
+    var ret Body
     json.Unmarshal([]byte(request.Body), &ret)
     fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
 

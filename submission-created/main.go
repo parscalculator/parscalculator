@@ -15,6 +15,7 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
     params := request.QueryStringParameters
    url := "https://api.idpay.ir/v1.1/payment"
 
+fmt.Printf(params)
 
 
 data := map[string]string{

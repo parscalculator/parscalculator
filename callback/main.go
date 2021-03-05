@@ -1,7 +1,7 @@
 package main
 
 import (
-    "github.com/gorilla/mux"
+    "log"
     "github.com/aws/aws-lambda-go/events"
     "github.com/aws/aws-lambda-go/lambda"
     "net/http"
@@ -16,11 +16,9 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
     params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"
 
-mux.HandleFunc("/signup", func(w http.ResponseWriter, r *http.Request) {
-        //NOTE : Invoke ParseForm or ParseMultipartForm before reading form values
-        r.ParseForm()
-        fmt.Printf("USERNAME => %s\n", r.FormValue("id"))
-})
+
+        lc, ok := lambdacontext.FromContext(ctx)
+
 data := map[string]string{
   "id":       params["id"],
   "order_id": params["order_id"],

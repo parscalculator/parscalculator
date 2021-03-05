@@ -1,7 +1,6 @@
 package main
 
 import (
-    "github.com/golang/protobuf/ptypes/timestamp"
     "github.com/aws/aws-lambda-go/events"
     "github.com/aws/aws-lambda-go/lambda"
     "net/http"
@@ -15,7 +14,7 @@ import (
 
 type Form struct {
     Status    string `json:"status"`
-    Track_id    number `json:"track_id"`
+    Track_id    string `json:"track_id"`
     Id string `json:"id"`
     Order_id string `json:"order_id"`
     Amount  string `json:"amount"`

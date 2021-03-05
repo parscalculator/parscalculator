@@ -1,6 +1,7 @@
 package main
 
 import (
+    "github.com/gorilla/mux"
     "github.com/aws/aws-lambda-go/events"
     "github.com/aws/aws-lambda-go/lambda"
     "net/http"

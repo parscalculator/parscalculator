@@ -9,17 +9,19 @@ import (
     "io/ioutil"
     "fmt"
     "context"
+    "time"
 )
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
    url := "https://api.idpay.ir/v1.1/payment"
+   firebaseurl := "https://calculator-a43b1.firebaseio.com/rest/saving-data/fireblog/posts.json"
     fmt.Printf("id: %s, link: ", request)
 
 
 
 data := map[string]string{
-  "order_id": params["order_id"],
+  "order_id": time.Now().Nanosecond(),
   "amount":   params["amount"],
   "name":     params["name"],
   "phone":    params["phone"],
@@ -31,15 +33,23 @@ data := map[string]string{
 payload, _ := json.Marshal(data)
 
 req, _ := http.NewRequest("POST", url, bytes.NewBuffer(payload))
+req2, _ := http.NewRequest("POST", firebaseurl, bytes.NewBuffer(payload))
+
 
 req.Header.Set("Content-Type", "application/json")
 req.Header.Set("X-API-KEY", "8b25c85f-0675-4c17-a28a-013aa8e5ecaa")
 req.Header.Set("X-SANDBOX", "1")
 
 res, _ := http.DefaultClient.Do(req)
+res2, _ := http.DefaultClient.Do(req2)
+
 
 defer res.Body.Close()
+defer res2.Body.Close()
+
 body, _ := ioutil.ReadAll(res.Body)
+body2, _ := ioutil.ReadAll(res2.Body)
+
 
 strbody:= string(body)
 type nova struct {

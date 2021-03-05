@@ -11,7 +11,7 @@ import (
     "context"
 )
 
-func handler(ctx *http.Request, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"
 

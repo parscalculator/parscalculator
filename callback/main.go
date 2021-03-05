@@ -11,11 +11,28 @@ import (
     "context"
 )
 
-func handler(w http.ResponseWriter, r *http.Request, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+
+type Form struct {
+    Name    string `json:"name"`
+    Email   string `json:"email"`
+    Message string `json:"message"`
+}
+
+type Payload struct {
+    Form Form `json:"data"`
+}
+
+type Body struct {
+    Payload Payload `json:"payload"`
+}
+
+
+func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"
-
-
+    var dt Body
+    json.Unmarshal([]byte(request.Body), &ret)
+    fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
 
 data := map[string]string{
   "id":       params["id"],

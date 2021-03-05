@@ -9,7 +9,6 @@ import (
     "io/ioutil"
     "fmt"
     "context"
-    "time"
 )
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {

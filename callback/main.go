@@ -16,6 +16,8 @@ type Form struct {
     Name    string `json:"name"`
     Email   string `json:"email"`
     Message string `json:"message"`
+    Id string `json:"id"`
+    Order_id string `json:"order_id"`
 }
 
 type Payload struct {
@@ -32,7 +34,7 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
   url := "https://api.idpay.ir/v1.1/payment/verify"
     var ret Body
     json.Unmarshal([]byte(request.Body), &ret)
-    fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
+    fmt.Printf("id: %s, link: %s", ret.Id, ret.Order_id)
 
 data := map[string]string{
   "id":       params["id"],

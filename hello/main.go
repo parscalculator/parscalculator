@@ -21,7 +21,7 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 
 
 data := map[string]string{
-  "order_id": time.Now().Nanosecond(),
+  "order_id": params["order_id"],
   "amount":   params["amount"],
   "name":     params["name"],
   "phone":    params["phone"],

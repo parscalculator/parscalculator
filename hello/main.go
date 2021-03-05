@@ -67,7 +67,7 @@ json.Unmarshal([]byte(strbody), &ret)
 json.Unmarshal([]byte(strbody2), &ret2)
 
 fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
-fmt.Printf("name: %s", ret.Name)
+fmt.Printf("name: %s", ret2.Name)
 return &events.APIGatewayProxyResponse{
         StatusCode:        302,
         Headers:           map[string]string{"Location": ret.Link , "Content-Type": "text/plain"},

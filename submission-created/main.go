@@ -14,7 +14,8 @@ import (
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
    url := "https://api.idpay.ir/v1.1/payment"
-
+   lc, ok := lambdacontext.FromContext(ctx)
+   cc := lc.ClientContext
 
 
 data := map[string]string{
@@ -48,11 +49,10 @@ type nova struct {
 var ret nova
 json.Unmarshal([]byte(strbody), &ret)
 fmt.Printf("id: %s, link: %s", ret.Id, ret.Link)
-fmt.Printf(params)
 
 return &events.APIGatewayProxyResponse{
         StatusCode:        302,
-        Headers:           map[string]string{"Location": ret.Link , "Content-Type": "text/plain"},
+        Headers:           map[string]string{"Location": "https://google.com" , "Content-Type": "text/plain"},
         MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
         Body:              "Hello, World!",
         IsBase64Encoded:   false,

@@ -1,7 +1,6 @@
 package main
 
 import (
-    "log"
     "github.com/aws/aws-lambda-go/events"
     "github.com/aws/aws-lambda-go/lambda"
     "net/http"
@@ -11,7 +10,11 @@ import (
     "fmt"
     "context"
 )
-
+type ClientContext struct {
+    Client ClientApplication
+    Env    map[string]string `json:"env"`
+    Custom map[string]string `json:"custom"`
+}
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     params := request.QueryStringParameters
   url := "https://api.idpay.ir/v1.1/payment/verify"

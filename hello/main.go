@@ -55,7 +55,7 @@ type nova struct {
     Id    string
     Link  string
 }
-strbody2:= string(body)
+strbody2:= string(body2)
 type nova2 struct {
     Name    string
 }

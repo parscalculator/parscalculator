@@ -36,7 +36,7 @@ body, _ := ioutil.ReadAll(res.Body)
 fmt.Println(string(body))
 return &events.APIGatewayProxyResponse{
         StatusCode:        302,
-        Headers:           map[string]string{"Location": "https://google.com" , "Content-Type": "text/plain"},
+        Headers:           map[string]string{"Location": "https://angry-albattani-4d4bde.netlify.app/success/" , "Content-Type": "text/plain"},
         MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
         Body:              "Hello, World!",
         IsBase64Encoded:   false,

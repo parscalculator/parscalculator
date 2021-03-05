@@ -1,7 +1,7 @@
 package main
 
 import (
-    "github.com/golang/protobuf/timestamp"
+    "github.com/golang/protobuf/ptypes/timestamp"
     "github.com/aws/aws-lambda-go/events"
     "github.com/aws/aws-lambda-go/lambda"
     "net/http"

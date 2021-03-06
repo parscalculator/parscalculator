@@ -296,7 +296,57 @@
 
 <p>والسلام.</p>
 
-  
+
+  <div>
+    <h2>Which did you hear?</h2>
+    <form
+    name="yanny-v-laurel" method="post" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
+      <input type="hidden" name="form-name" value="yanny-v-laurel" />
+      <ul>
+        <li v-for="(soundBite, index) in soundClips" :key="index">
+          <label>
+            <input
+              type="radio"
+              name="clip"
+              :value="soundBite"
+              :checked="soundBite === form.chosenClip"
+              @input="ev => form.chosenClip = ev.target.value"
+            >
+            <span>{{ soundBite }}</span>
+          </label>
+        </li>
+      </ul>
+      <button type="submit">Just tell me already</button>
+    </form>
+  </div>
+
+
+<script>
+export default {
+  export default {
+  name: "PollForm",
+  data() {
+    return {
+      soundClips: ["Yanny", "Laurel", "Both"],
+      form: {
+        chosenClip: "Both"
+      }
+    };
+  },
+  methods: {
+    handleSubmit () {
+      //some stuff
+      fetch('/', {...})
+      .then(res => {
+        this.$router.push('thanks')
+      })
+      .catch(err => {
+        this.$router.push('404')
+      })
+    }
+  }
+}
+</script>
   
  
   

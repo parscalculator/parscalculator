@@ -53,6 +53,8 @@
     
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js?ver=5.2.5'></script>
 <script type='text/javascript' src="https://angry-albattani-4d4bde.netlify.app//assets/js/1.js"></script>
+<script type='text/javascript' src="https://angry-albattani-4d4bde.netlify.app//assets/js/2.js"></script>
+
 <!--
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
@@ -222,34 +224,14 @@
     </div>
 </div>
   
-  <form name="contact" method="POST" data-netlify="true" action="/.netlify/functions/hello">
+  <form name="contact" method="POST" data-netlify="true">
  <div class="row uniform">
-
-<div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6">
-    <input type="text" name="order_id" placeholder=" order_id " />
-  </div>
-
-<div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6">
-    <input type="text" name="amount" placeholder=" amount " />
-  </div>
-
-
   <div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6">
     <input type="text" name="name" placeholder=" نام و نام خانوادگی " />
   </div>
-    <div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6">
     <input type="text" name="phone" placeholder=" شماره تماس " />
   </div>
-
-
-<div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6">
-    <input type="text" name="mail" placeholder=" mail " />
-  </div>
-<div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6">
-    <input type="text" name="desc" placeholder=" desc" />
-  </div>
-
-
 </div>
   <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<textarea name="Message" placeholder="پیام را وارد کنید ..." rows="6"></textarea>
@@ -296,57 +278,7 @@
 
 <p>والسلام.</p>
 
-
-  <div>
-    <h2>Which did you hear?</h2>
-    <form
-    name="yanny-v-laurel" method="post" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
-      <input type="hidden" name="form-name" value="yanny-v-laurel" />
-      <ul>
-        <li v-for="(soundBite, index) in soundClips" :key="index">
-          <label>
-            <input
-              type="radio"
-              name="clip"
-              :value="soundBite"
-              :checked="soundBite === form.chosenClip"
-              @input="ev => form.chosenClip = ev.target.value"
-            >
-            <span>{{ soundBite }}</span>
-          </label>
-        </li>
-      </ul>
-      <button type="submit">Just tell me already</button>
-    </form>
-  </div>
-
-
-<script>
-export default {
-  export default {
-  name: "PollForm",
-  data() {
-    return {
-      soundClips: ["Yanny", "Laurel", "Both"],
-      form: {
-        chosenClip: "Both"
-      }
-    };
-  },
-  methods: {
-    handleSubmit () {
-      //some stuff
-      fetch('/', {...})
-      .then(res => {
-        this.$router.push('thanks')
-      })
-      .catch(err => {
-        this.$router.push('404')
-      })
-    }
-  }
-}
-</script>
+  
   
  
   
@@ -578,7 +510,7 @@ hcb_user = {
 
   </div>
 
-  <small id="build-time">Site generated on Fri, 05 Mar 2021 11:16:52 +0330</small>
+  <small id="build-time">Site generated on Sun, 07 Mar 2021 21:59:20 +0330</small>
 
 </footer>
 

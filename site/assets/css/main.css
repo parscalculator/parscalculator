@@ -25,70 +25,40 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face {
   font-family: "Vazir";
-  src: url("http://localhost:4002/assets/fonts/Vazir.eot");
-  src: url("http://localhost:4002/assets/fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("http://localhost:4002/assets/fonts/Vazir.woff2") format("woff2"), url("http://localhost:4002/assets/fonts/Vazir.woff") format("woff"), url("http://localhost:4002/assets/fonts/Vazir.ttf") format("truetype");
+  src: url("/assets/fonts/Vazir.eot");
+  src: url("/assets/fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Vazir.woff2") format("woff2"), url("/assets/fonts/Vazir.woff") format("woff"), url("/assets/fonts/Vazir.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "Vazir";
-  src: url("../fonts/Vazir-Bold.eot");
-  src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Bold.woff2") format("woff2"), url("../fonts/Vazir-Bold.woff") format("woff"), url("../fonts/Vazir-Bold.ttf") format("truetype");
+  src: url("/assets/fonts/Vazir-Bold.eot");
+  src: url("/assets/fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Vazir-Bold.woff2") format("woff2"), url("/assets/fonts/Vazir-Bold.woff") format("woff"), url("/assets/fonts/Vazir-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: "Vazir";
-  src: url("../fonts/Vazir-Black.eot");
-  src: url("../fonts/Vazir-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Black.woff2") format("woff2"), url("../fonts/Vazir-Black.woff") format("woff"), url("../fonts/Vazir-Black.ttf") format("truetype");
+  src: url("/assets/fonts/Vazir-Black.eot");
+  src: url("/assets/fonts/Vazir-Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Vazir-Black.woff2") format("woff2"), url("/assets/fonts/Vazir-Black.woff") format("woff"), url("/assets/fonts/Vazir-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal; }
 @font-face {
   font-family: "Vazir";
-  src: url("../fonts/Vazir-Medium.eot");
-  src: url("../fonts/Vazir-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Medium.woff2") format("woff2"), url("../fonts/Vazir-Medium.woff") format("woff"), url("../fonts/Vazir-Medium.ttf") format("truetype");
+  src: url("/assets/fonts/Vazir-Medium.eot");
+  src: url("/assets/fonts/Vazir-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Vazir-Medium.woff2") format("woff2"), url("/assets/fonts/Vazir-Medium.woff") format("woff"), url("/assets/fonts/Vazir-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
 @font-face {
   font-family: "Vazir";
-  src: url("../fonts/Vazir-Light.eot");
-  src: url("../fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Light.woff2") format("woff2"), url("../fonts/Vazir-Light.woff") format("woff"), url("../fonts/Vazir-Light.ttf") format("truetype");
+  src: url("/assets/fonts/Vazir-Light.eot");
+  src: url("/assets/fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Vazir-Light.woff2") format("woff2"), url("/assets/fonts/Vazir-Light.woff") format("woff"), url("/assets/fonts/Vazir-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: "Vazir";
-  src: url("../fonts/Vazir-Thin.eot");
-  src: url("../fonts/Vazir-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Thin.woff2") format("woff2"), url("../fonts/Vazir-Thin.woff") format("woff"), url("../fonts/Vazir-Thin.ttf") format("truetype");
+  src: url("/assets/fonts/Vazir-Thin.eot");
+  src: url("/assets/fonts/Vazir-Thin.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Vazir-Thin.woff2") format("woff2"), url("/assets/fonts/Vazir-Thin.woff") format("woff"), url("/assets/fonts/Vazir-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal; }
-@font-face {
-  font-family: Vazir;
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot");
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff2") format("woff2"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.ttf") format("truetype");
-  font-weight: normal; }
-@font-face {
-  font-family: Vazir;
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.eot");
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.woff2") format("woff2"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.ttf") format("truetype");
-  font-weight: bold; }
-@font-face {
-  font-family: Vazir;
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.eot");
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.woff2") format("woff2"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.ttf") format("truetype");
-  font-weight: 300; }
-@font-face {
-  font-family: Vazir;
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.eot");
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.woff2") format("woff2"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.ttf") format("truetype");
-  font-weight: 500; }
-@font-face {
-  font-family: Vazir;
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.eot");
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.woff2") format("woff2"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.ttf") format("truetype");
-  font-weight: 100; }
-@font-face {
-  font-family: Vazir;
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.eot");
-  src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.woff2") format("woff2"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.ttf") format("truetype");
-  font-weight: 900; }
 /* Persian Wikipedia uses this:
  * pfont,'Iranian Serif','Iranian Sans',Tahoma,'Noto Serif','Droid Arabic Naskh','DejaVu Sans',serif !important;
  * Some latin fonts: "Abril Fatface", "Vollkorn", "Josefin Slab"

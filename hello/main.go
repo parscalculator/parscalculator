@@ -36,7 +36,7 @@ req2, _ := http.NewRequest("POST", firebaseurl, bytes.NewBuffer(payload))
 
 
 req.Header.Set("Content-Type", "application/json")
-req.Header.Set("X-API-KEY", "8b25c85f-0675-4c17-a28a-013aa8e5ecaa")
+req.Header.Set("X-API-KEY", "17307f90-9c7d-4965-867a-2127603f3e53")
 req.Header.Set("X-SANDBOX", "1")
 
 res, _ := http.DefaultClient.Do(req)
